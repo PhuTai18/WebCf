@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-top"></div>
+    <div class="main-content">
+        <div class="div-left">
+            @{Html.RenderAction("Index", "Catogory"); }
+        </div>
+        <div class="div-content">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="div-footer"></div>
+</body>
+</html>

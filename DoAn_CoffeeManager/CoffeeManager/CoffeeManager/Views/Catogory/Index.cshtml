@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CoffeeManager.Models.Catogory>
+<style>
+    .fm-link:hover {
+        text-decoration: none;
+    }
+</style>
+<h3>Chi Tiết</h3>
+@foreach (var catogory in Model)
+{
+    @*<h4>
+            @Html.DisplayFor(model => catogory.name_catogory)
+        </h4>*@
+    <h3>
+        @Html.ActionLink(catogory.name_catogory, "Index", "ProductClient", new { category = catogory.id}, new { @class = "fm-link" })
+    </h3>
+}
+
+
